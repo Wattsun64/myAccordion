@@ -1,7 +1,10 @@
+$my-font: courier;
+
 .accordion-wrap {
 	
 	.accordion-head {
 
+		font-family: $my-font;
 		padding: 10px;
 		background-color: #d3d3d3;
 		
@@ -9,11 +12,17 @@
 
 	.accordion-content {
 		
+			font-family: $my-font;
 			padding: 10px;
 			display: none;
 	}
-}
 
-.display {
-	display: block;
+	.display {
+		display: block
+	}
+
+	.active {
+		background-color: #999;
+		color: #fff;
+	}
 }

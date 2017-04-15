@@ -1,23 +1,15 @@
 (function() {
-
-	var acc = document.querySelectorAll('.accordion-head'),
-		change = document.getElementById('change'),
+	var head = document.querySelectorAll('.accordion-head'),
 		i;
 
-		for ( i = 0; i < acc.length; i++ ) {
-			acc[i].addEventListener('click', doSomething)
-		}
+	for ( i = 0; i < head.length; i++ ) {
+		head[i].addEventListener('click', accordion);
 
-		function doSomething() {
-			var con = this.nextElementSibling;
+	}
 
-			if ( con.style.display === 'none' ) {
-				con.style.display = 'block'
-			} else {
-				con.style.display = 'none';
-			}
-
-		}
-
+	function accordion() {
+		this.nextElementSibling.classList.toggle('display');
+		this.classList.toggle('active');
+	}
 
 }())
